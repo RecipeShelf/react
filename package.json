@@ -2,7 +2,7 @@
   "name": "recipeshelf",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "test": "echo \"Error: no tsest specified\" && exit 1",
     "start": "webpack-dev-server .",
