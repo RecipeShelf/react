@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import IngredientCount from "./components/IngredientCountText";
 import SpiceLevel from "./components/SpiceLevelImages";
 import ViewRecipeButton from "./components/ViewRecipeButton";
 
@@ -16,6 +17,9 @@ const ComponentList = () => {
             <hr />
             <h1>View Recipe</h1>
             <ViewRecipeButton recipeId={"123abc"}></ViewRecipeButton>
+            <hr />
+            <h1>Ingredient Count</h1>
+            <IngredientCount count={5}></IngredientCount>
         </Router>
     )
 }
