@@ -22,8 +22,8 @@ function getImgSrc(strength, maxStrength) {
 
 export default ({ level }) => (
     <>
-        <img src={getImgSrc(getStrength(level), 2)} />
-        <img src={getImgSrc(getStrength(level), 1)} />
-        <img src={getImgSrc(getStrength(level), 0)} />
+        <img src={getImgSrc(getStrength(level), 2)} alt={level + ' spice level'} />
+        <img src={getImgSrc(getStrength(level), 1)} alt=''/>
+        <img src={getImgSrc(getStrength(level), 0)} alt=''/>
     </>
 );
