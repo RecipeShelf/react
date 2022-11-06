@@ -18,7 +18,7 @@ module.exports = {
     open: {
       app: {
         name: 'Google Chrome',
-        arguments: ['--remote-debugging-port=9222', '--user-data-dir=remote-debug-profile', '--disable-web-security']
+        arguments: ['--remote-debugging-port=9222', '--disable-web-security']
       }
     },
     hot: true,
@@ -26,6 +26,14 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@services': path.resolve(__dirname, 'src/services'),
+      '@store': path.resolve(__dirname, 'src/store'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
+      '@views': path.resolve(__dirname, 'src/views')
+    }
   },
   module: {
     rules: [
@@ -38,6 +46,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      favicon: "./favicon.png",
       template: path.join(__dirname, 'public', 'index.html')
     })
   ]

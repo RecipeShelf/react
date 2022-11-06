@@ -1,10 +1,14 @@
 import React from "react";
+import SpiceLevel from "./components/SpiceLevel";
 
 const App = () =>{
     return (
-        <h1>
-            Hello world! I am using React
-        </h1>
+        <ul>
+            <li><SpiceLevel level={"Sweet"}></SpiceLevel></li>
+            <li><SpiceLevel level={"Mild"}></SpiceLevel></li>
+            <li><SpiceLevel level={"Medium"}></SpiceLevel></li>
+            <li><SpiceLevel level={"Hot"}></SpiceLevel></li>
+        </ul>        
     )
 }
 
