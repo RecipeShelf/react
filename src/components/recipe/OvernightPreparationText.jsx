@@ -1,8 +1,11 @@
 import * as React from "react";
-import { Typography } from '@mui/material';
+import { Divider, Typography } from '@mui/material';
 
-export default () => (
-    <>
-        <Typography color="error">May need overnight preparation</Typography>
-    </>
-);
+export default ({ enable }) => {
+    if (enable) {
+        return <><Divider sx={{ my: 1}}/><Typography color="error">May need overnight preparation</Typography></>;
+    }
+    else {
+        return <></>;
+    }
+};

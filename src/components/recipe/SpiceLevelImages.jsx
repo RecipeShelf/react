@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Stack } from '@mui/material';
 
 const plainChili = './images/plain-chili.svg';
 const redChili = './images/red-chili.svg';
@@ -20,10 +21,12 @@ function getImgSrc(strength, maxStrength) {
     return strength <= maxStrength ? plainChili : redChili;
 }
 
-export default ({ level }) => (
+export default ({ level, imgWidth }) => (
     <>
-        <img src={getImgSrc(getStrength(level), 2)} alt={level + ' spice level'} />
-        <img src={getImgSrc(getStrength(level), 1)} alt=''/>
-        <img src={getImgSrc(getStrength(level), 0)} alt=''/>
+        <Stack direction="row">
+            <img src={getImgSrc(getStrength(level), 2)} alt={level + ' spice level'} width={imgWidth} />
+            <img src={getImgSrc(getStrength(level), 1)} alt='' width={imgWidth} />
+            <img src={getImgSrc(getStrength(level), 0)} alt='' width={imgWidth} />
+        </Stack>
     </>
 );

@@ -6,7 +6,7 @@ function getList(names) {
 }
 
 function getText(name) {
-    return <Typography fontStyle="bold" textTransform="uppercase">{name}</Typography>;
+    return <Typography textTransform="uppercase">{name}</Typography>;
 }
 
 export default ({names}) => {
